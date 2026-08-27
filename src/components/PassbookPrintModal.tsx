@@ -31,7 +31,7 @@ export const PassbookPrintModal: React.FC<PassbookPrintModalProps> = ({
     window.print();
   };
 
-  const displaySchoolName = schoolName || schoolProfile.nama_sekolah || 'TK NEGERI 02 KEMAYORAN';
+  const displaySchoolName = schoolName || schoolProfile.nama_sekolah || 'KELOMPOK B3 TK NEGERI KEMAYORAN 02';
   const displayAddress = schoolProfile.alamat || schoolProfile.alamat_sekolah || '';
   const displayPhone = schoolProfile.telepon || '';
   const displayBendahara = schoolProfile.bendahara || 'Bendahara Pengelola';
@@ -83,7 +83,7 @@ export const PassbookPrintModal: React.FC<PassbookPrintModalProps> = ({
                 {schoolProfile.npsn ? ` • NPSN: ${schoolProfile.npsn}` : ''}
               </p>
               <p className="text-[11px] text-blue-700 font-semibold mt-0.5">
-                UNIT PENGELOLA TABUNGAN DAN KEUANGAN SISWA
+                TABUNGAN SISWA
               </p>
             </div>
           </div>

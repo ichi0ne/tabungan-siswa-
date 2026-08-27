@@ -30,7 +30,7 @@ export const ReceiptModal: React.FC<ReceiptModalProps> = ({
   };
 
   const isSetoran = transaksi.jenis_transaksi === 'SETORAN';
-  const displaySchoolName = schoolName || schoolProfile.nama_sekolah || 'SMP / SMA NEGERI INDONESIA';
+  const displaySchoolName = schoolName || schoolProfile.nama_sekolah || 'KELOMPOK B3 TK NEGERI KEMAYORAN 02';
   const displayAddress = schoolProfile.alamat || schoolProfile.alamat_sekolah || '';
   const displayPhone = schoolProfile.telepon || '';
   const displayOfficer = transaksi.nama_petugas || schoolProfile.bendahara || 'Petugas Tabungan';

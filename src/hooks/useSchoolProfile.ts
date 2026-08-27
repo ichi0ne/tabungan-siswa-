@@ -2,12 +2,12 @@ import { useState, useEffect, useCallback } from 'react';
 import { SchoolProfile } from '../types';
 
 export const DEFAULT_SCHOOL_PROFILE: SchoolProfile = {
-  nama_sekolah: 'TK NEGERI 02 KEMAYORAN',
+  nama_sekolah: 'KELOMPOK B3 TK NEGERI KEMAYORAN 02',
   alamat: 'Jl. Galindra, RT08/RW08, Kel.Kebon Kosong, Kec.Kemayoran',
   alamat_sekolah: 'Jl. Galindra, RT08/RW08, Kel.Kebon Kosong, Kec.Kemayoran',
   telepon: '',
   email: '',
-  npsn: '',
+  npsn: '69820409',
   kota: 'Jakarta Pusat',
   wali_kelas: '',
   kontak_wali_kelas: '',
@@ -25,9 +25,22 @@ export function getStoredSchoolProfile(): SchoolProfile {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
+      // Sinkronisasi otomatis jika tersimpan nama default/lama
+      let namaSekolah = parsed.nama_sekolah;
+      if (
+        !namaSekolah ||
+        namaSekolah === 'SMP / SMA NEGERI INDONESIA' ||
+        namaSekolah === 'TK NEGERI 02 KEMAYORAN' ||
+        namaSekolah === 'TK NEGERI KEMAYORAN 02' ||
+        namaSekolah === '3B TK NEGERI KEMAYORAN 02'
+      ) {
+        namaSekolah = DEFAULT_SCHOOL_PROFILE.nama_sekolah;
+      }
+
       return {
         ...DEFAULT_SCHOOL_PROFILE,
         ...parsed,
+        nama_sekolah: namaSekolah,
         alamat: parsed.alamat || parsed.alamat_sekolah || DEFAULT_SCHOOL_PROFILE.alamat,
         alamat_sekolah: parsed.alamat_sekolah || parsed.alamat || DEFAULT_SCHOOL_PROFILE.alamat,
         tampilkan_demo_login: parsed.tampilkan_demo_login !== undefined ? parsed.tampilkan_demo_login : true

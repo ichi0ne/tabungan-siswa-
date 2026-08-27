@@ -39,7 +39,7 @@ export const Login: React.FC = () => {
     setPassword(p);
   };
 
-  const schoolName = schoolProfile.nama_sekolah || 'Tabungan Siswa';
+  const schoolName = schoolProfile.nama_sekolah || 'KELOMPOK B3 TK NEGERI KEMAYORAN 02';
 
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4 antialiased selection:bg-blue-600 selection:text-white relative overflow-hidden">
