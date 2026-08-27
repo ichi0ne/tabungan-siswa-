@@ -23,7 +23,7 @@
 // 1. KONFIGURASI UMUM & NAMA SHEET
 // =========================================================================================
 var CONFIG = {
-  APP_NAME: "Sistem Manajemen Keuangan Tabungan Siswa",
+  APP_NAME: "Aplikasi Tabungan Siswa",
   VERSION: "1.0.0",
   SHEETS: {
     USERS: "USERS",

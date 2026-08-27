@@ -17,7 +17,7 @@ export const Login: React.FC = () => {
   const [showDemo, setShowDemo] = useState<boolean>(() => {
     const stored = localStorage.getItem('LOGIN_DEMO_PRESET_VISIBLE');
     if (stored !== null) {
-      return stored === 'true';
+      return stored === 'false';
     }
     return schoolProfile.tampilkan_demo_login !== false;
   });
@@ -119,84 +119,7 @@ export const Login: React.FC = () => {
             )}
           </button>
         </form>
-
-        {/* Quick Demo Login Preset Section (Dengan Properti Hidden / Toggle) */}
-        <div className="mt-8 pt-5 border-t border-slate-800">
-          <div className="flex items-center justify-between text-xs text-slate-400 mb-3">
-            <div className="flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span className="font-semibold uppercase tracking-wider">Akun Demo</span>
-            </div>
-            <button
-              id="btn-toggle-demo-login"
-              type="button"
-              onClick={handleToggleDemo}
-              className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-400 hover:text-blue-400 transition-colors cursor-pointer py-1 px-2 rounded-lg hover:bg-slate-800"
-            >
-              {showDemo ? (
-                <>
-                  <EyeOff className="w-3.5 h-3.5" />
-                  <span>Sembunyikan</span>
-                </>
-              ) : (
-                <>
-                  <Eye className="w-3.5 h-3.5" />
-                  <span>Tampilkan</span>
-                </>
-              )}
-            </button>
-          </div>
-
-          {/* Preset Buttons - Hidden jika showDemo = false */}
-          {showDemo ? (
-            <div id="demo-accounts-preset-container" className="grid grid-cols-2 gap-2 animate-fadeIn">
-              <button
-                id="btn-demo-admin"
-                type="button"
-                onClick={() => handleQuickLogin('admin', 'admin123')}
-                className="p-2 text-left rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 transition-colors group cursor-pointer"
-              >
-                <span className="block text-xs font-bold text-blue-400 group-hover:text-blue-300">ADMIN</span>
-                <span className="text-[10px] text-slate-400">admin / admin123</span>
-              </button>
-
-              <button
-                id="btn-demo-bendahara"
-                type="button"
-                onClick={() => handleQuickLogin('bendahara', 'bendahara123')}
-                className="p-2 text-left rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 transition-colors group cursor-pointer"
-              >
-                <span className="block text-xs font-bold text-emerald-400 group-hover:text-emerald-300">BENDAHARA</span>
-                <span className="text-[10px] text-slate-400">bendahara / bendahara123</span>
-              </button>
-
-              <button
-                id="btn-demo-wali"
-                type="button"
-                onClick={() => handleQuickLogin('walikelas7a', 'wali123')}
-                className="p-2 text-left rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 transition-colors group cursor-pointer"
-              >
-                <span className="block text-xs font-bold text-indigo-400 group-hover:text-indigo-300">WALI KELAS</span>
-                <span className="text-[10px] text-slate-400">walikelas7a / wali123</span>
-              </button>
-
-              <button
-                id="btn-demo-siswa"
-                type="button"
-                onClick={() => handleQuickLogin('2025001', '2025001')}
-                className="p-2 text-left rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 transition-colors group cursor-pointer"
-              >
-                <span className="block text-xs font-bold text-amber-400 group-hover:text-amber-300">SISWA (NIS)</span>
-                <span className="text-[10px] text-slate-400">2025001 / 2025001</span>
-              </button>
-            </div>
-          ) : (
-            <p className="text-[11px] text-slate-500 italic text-center py-1">
-              Preset akun demo disembunyikan. Klik &quot;Tampilkan&quot; jika diperlukan.
-            </p>
-          )}
-        </div>
-
+        
         <div className="mt-6 text-center text-[11px] text-slate-500">
           Dilindungi Autentikasi Role-Based Access Control (RBAC)
         </div>

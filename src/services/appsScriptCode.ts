@@ -8,7 +8,7 @@ export const APPS_SCRIPT_ALL_IN_ONE_CODE = `/**
  */
 
 var CONFIG = {
-  APP_NAME: "Sistem Manajemen Keuangan Tabungan Siswa",
+  APP_NAME: "Aplikasi Tabungan Siswa",
   VERSION: "1.0.0",
   SHEETS: {
     USERS: "USERS",

@@ -2,18 +2,18 @@ import { useState, useEffect, useCallback } from 'react';
 import { SchoolProfile } from '../types';
 
 export const DEFAULT_SCHOOL_PROFILE: SchoolProfile = {
-  nama_sekolah: 'SMP / SMA NEGERI INDONESIA',
-  alamat: 'Jl. Pendidikan No. 123, Komplek Sekolah Terpadu',
-  alamat_sekolah: 'Jl. Pendidikan No. 123, Komplek Sekolah Terpadu',
-  telepon: '(021) 555-0199',
-  email: 'info@sekolah.sch.id',
-  npsn: '20104050',
-  kota: 'Jakarta',
-  kepala_sekolah: 'Drs. H. Ahmad Sudrajat, M.Pd',
-  nip_kepala_sekolah: '19750812 200003 1 002',
-  bendahara: 'Siti Rahmawati, S.Pd',
-  nip_bendahara: '19820415 200801 2 015',
-  tahun_ajaran_aktif: '2025/2026',
+  nama_sekolah: 'TK NEGERI 02 KEMAYORAN',
+  alamat: 'Jl. Galindra, RT08/RW08, Kel.Kebon Kosong, Kec.Kemayoran',
+  alamat_sekolah: 'Jl. Galindra, RT08/RW08, Kel.Kebon Kosong, Kec.Kemayoran',
+  telepon: '',
+  email: '',
+  npsn: '',
+  kota: 'Jakarta Pusat',
+  wali_kelas: '',
+  kontak_wali_kelas: '',
+  bendahara: '',
+  kontak_bendahara_kelas: '',
+  tahun_ajaran_aktif: '2026/2027',
   tampilkan_demo_login: true
 };
 

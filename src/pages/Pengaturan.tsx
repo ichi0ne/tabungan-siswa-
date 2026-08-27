@@ -306,7 +306,7 @@ export const Pengaturan: React.FC = () => {
                   rows={2}
                   value={formData.alamat || formData.alamat_sekolah || ''}
                   onChange={e => setFormData({ ...formData, alamat: e.target.value, alamat_sekolah: e.target.value })}
-                  placeholder="Contoh: Jl. Pendidikan No. 123, Komplek Sekolah Terpadu"
+                  placeholder=""
                   className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white"
                 />
               </div>
@@ -330,7 +330,7 @@ export const Pengaturan: React.FC = () => {
                     type="email"
                     value={formData.email || ''}
                     onChange={e => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="Contoh: info@sekolah.sch.id"
+                    placeholder=""
                     className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white"
                   />
                 </div>
@@ -356,7 +356,7 @@ export const Pengaturan: React.FC = () => {
                     type="text"
                     value={formData.nip_kepala_sekolah || ''}
                     onChange={e => setFormData({ ...formData, nip_kepala_sekolah: e.target.value })}
-                    placeholder="Contoh: 19750812 200003 1 002"
+                    placeholder=""
                     className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white font-mono"
                   />
                 </div>
@@ -382,7 +382,7 @@ export const Pengaturan: React.FC = () => {
                     type="text"
                     value={formData.nip_bendahara || ''}
                     onChange={e => setFormData({ ...formData, nip_bendahara: e.target.value })}
-                    placeholder="Contoh: 19820415 200801 2 015"
+                    placeholder=""
                     className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:bg-white font-mono"
                   />
                 </div>

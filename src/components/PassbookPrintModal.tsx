@@ -31,7 +31,7 @@ export const PassbookPrintModal: React.FC<PassbookPrintModalProps> = ({
     window.print();
   };
 
-  const displaySchoolName = schoolName || schoolProfile.nama_sekolah || 'SMP / SMA NEGERI INDONESIA';
+  const displaySchoolName = schoolName || schoolProfile.nama_sekolah || 'TK NEGERI 02 KEMAYORAN';
   const displayAddress = schoolProfile.alamat || schoolProfile.alamat_sekolah || '';
   const displayPhone = schoolProfile.telepon || '';
   const displayBendahara = schoolProfile.bendahara || 'Bendahara Pengelola';

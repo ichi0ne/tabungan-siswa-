@@ -477,10 +477,10 @@ export const Laporan: React.FC = () => {
         {/* Kop Cetak Surat Resmi */}
         <div className="hidden print:block text-center pb-4 border-b-2 border-slate-900 mb-6">
           <h1 className="text-lg font-black uppercase tracking-wide text-slate-900">
-            {schoolProfile.nama_sekolah || 'SMP / SMA NEGERI INDONESIA'}
+            {schoolProfile.nama_sekolah || 'TK NEGERI 02 KEMAYORAN'}
           </h1>
           <p className="text-xs text-slate-600 font-medium mt-0.5">
-            {schoolProfile.alamat || schoolProfile.alamat_sekolah || 'Jl. Pendidikan No. 123'} 
+            {schoolProfile.alamat || schoolProfile.alamat_sekolah || ''} 
             {schoolProfile.telepon ? ` • Telp: ${schoolProfile.telepon}` : ''}
             {schoolProfile.npsn ? ` • NPSN: ${schoolProfile.npsn}` : ''}
           </p>
