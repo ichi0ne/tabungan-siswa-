@@ -1,0 +1,6 @@
+{
+  "name": "Sistem Manajemen Keuangan Tabungan Siswa",
+  "description": "Aplikasi web full-stack pengelolaan tabungan siswa berbasis Google Sheets dan Google Apps Script API untuk administrasi keuangan sekolah.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

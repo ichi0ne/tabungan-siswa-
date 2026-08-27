@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* Sembunyikan navigasi, sidebar, header tombol ketika mencetak */
+  aside, header, #toast-container, button, nav, .print\:hidden {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  #modal-receipt-backdrop, #modal-passbook-print-backdrop {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  #modal-receipt, #modal-passbook-print {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+  }
+
+  #printable-receipt-area, #printable-passbook-document, #printable-laporan-area {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
