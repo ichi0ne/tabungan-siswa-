@@ -57,7 +57,7 @@ export const Login: React.FC = () => {
             {schoolName}
           </h1>
           <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
-            Sistem Manajemen Keuangan & Tabungan Sekolah Berbasis Google Sheets API
+            Aplikasi Tabungan Anak Hebat Indonesia
           </p>
         </div>
 
